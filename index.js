@@ -14,16 +14,16 @@ var player2 = new Player()
 var deck = new Deck(suits,ranks)
 deck.createNewDeck()
 
-// prompt.start()
-//
-// prompt.get(['username1', 'username2'], function(err, result){
-//
-//   console.log("Input received");
-//   console.log(result.username1);
-//   console.log(result.username2);
-//   player1.username = result.username1
-//   player2.username = result.username2
-// });
+prompt.start()
+
+prompt.get(['username1', 'username2'], function(err, result){
+
+  console.log("Input received");
+  console.log(result.username1);
+  console.log(result.username2);
+  player1.username = result.username1
+  player2.username = result.username2
+});
 
 
 player1.deck = deck.dealHand(26)
@@ -32,7 +32,7 @@ player2.deck = deck.dealHand(26)
 console.log("Player1: ", player1.deck);
 console.log("Player2: ", player2.deck);
 
-// do {
+ do {
   var player1Play = player1.deck.pop()
   var player2Play = player2.deck.pop()
 
@@ -61,6 +61,6 @@ console.log("Player2: ", player2.deck);
   }
 
 
-// } while ((player1.deck.lenth !== 0) && (player2.deck.length !== 0));
+ } while ((player1.deck.lenth !== 0) && (player2.deck.length !== 0));
 
 //Shuffle Deck
